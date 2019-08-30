@@ -1,0 +1,289 @@
+/* resets */
+body, html {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  font-size: 1em;
+  color: #395C6B;
+}
+
+ul, li {
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  color: #00D9C0;
+  text-decoration: none;
+}
+
+h1, h2, h4 {
+  font-family: 'Playfair Display', serif;
+}
+
+h1 {
+  /* text-transform: uppercase; */
+  font-size: 5em;
+  color: #00D9C0;
+  line-height: 1.2;
+  margin: .5em 0;
+}
+
+h2 {
+  font-size: 3em;
+  margin: 1em 0;
+}
+
+h3 {
+  font-size: 1.5em;
+}
+
+h5 {
+  font-size: 1.1em;
+  margin: .2em 0;
+}
+
+button {
+  font-size: 1em;
+  text-transform: uppercase;
+  padding: 1em 2em;
+  font-weight: 800;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+input, textarea {
+  background: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  outline: none;
+  border: none;
+}
+
+input[type=radio] {
+  border: 2px solid #FED766;
+  padding: 1em;
+}
+
+input[type=radio]:checked {
+  background: #FED766;
+}
+
+input[type=text],
+input[type=email],
+textarea {
+  border-bottom: 2px solid #395C6B;
+  font-size: 1em;
+  color: #395C6B;
+}
+
+input[type=text],
+input[type=email] {
+  flex-basis: 45%;
+}
+
+input[type=text]::-webkit-input-placeholder,
+input[type=email]::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  color: #395C6B;
+}
+
+textarea {
+  width: 100%;
+  min-height: 7em;
+  margin: 3em 0;
+}
+
+.wrapper {
+ display: block;
+}
+
+.grid {
+  display: grid;
+  background: white;
+  grid-column-gap: 1.25em;
+  grid-row-gap: 1.25em;
+  max-height: 800px;
+  padding: 3em 5em;
+}
+
+/* common styles */
+.details {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: .9em;
+}
+
+.bigger-p {
+  font-size: 1.2em;
+}
+
+/* line in details */
+.info {
+  display: block;
+  position: relative;
+  flex-basis: 10em;
+}
+
+.line-crumb:after {
+  content: "";
+  background-color: #00D9C0;
+  padding: .07em 4em;
+  position: absolute;
+  top: .6em;
+  margin-left: .8em;
+}
+
+.line-crumb {
+  color: #00D9C0;
+  font-weight: 800;
+}
+
+/* about section */
+.about {
+  grid-template-columns: [col1] 2fr [col2] 5fr;
+  grid-template-rows: [row1] 85% [row2] 15%;
+  grid-template-areas: 
+  "first ."
+  "last last"
+}
+
+.about__col1 {
+  grid-area: first;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  padding: 2.5em 0;
+}
+
+.about__row2 {
+  grid-area: last;
+}
+
+.about__buttons {
+  margin: 2em 0;
+}
+
+.about button:first-child {
+  margin-right: 1em;
+  background: #00D9C0;
+  color: #FFFCF9;
+  border: none;
+}
+
+.about button:last-child {
+  border: 2px solid #00D9C0;
+  color: #00D9C0;
+}
+
+/* services section */
+.services__col1 {
+  grid-area: first;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  padding: 2.5em 0;
+}
+
+.services__col2 {
+  grid-area: second;
+}
+
+.services__row3 {
+  grid-area: last;
+}
+
+.services h5 {
+  color: #00D9C0;
+}
+
+.services {
+  grid-template-columns: [col1] 1.5fr [col2] 1fr [col3] 3fr;
+  grid-template-rows: [row1] 30% [row2] 55% [row3] 15%;
+  grid-template-areas: "first . ." ". . second" "last last last";
+  /* border-top: 4px solid #F59CA9; */
+}
+
+/* portfolio section */
+.portfolio__row1 {
+  grid-area: first;
+  overflow: hidden;
+}
+
+.portfolio__col2 {
+  grid-area: second;
+}
+
+.portfolio__col3 {
+  grid-area: last;
+}
+
+.portfolio__col2,
+.portfolio__col3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  padding: 3em 0;
+  /* border-top: 2px solid #049A8F; */
+}
+
+.portfolio h2 {
+  color: white;
+}
+
+.portfolio {
+  grid-template-rows: [row1] 80% [row2] 20%;
+  grid-template-columns: [col1] 4fr [col2] 3fr;
+  grid-template-areas: "first first" "second last";
+}
+
+.portfolio-one {
+  background: #00D9C0;
+}
+
+.portfolio-two {
+  background: #FED766;
+}
+
+/* contact section */
+.contact__col1 {
+  grid-area: first;
+}
+
+.contact__col2 {
+  grid-area: second;
+}
+
+.contact {
+  grid-template-columns: [col1] 1.5fr [col2] 1fr [col3] 3fr;
+  grid-template-areas: "first . second";
+}
+
+.contact h2 {
+  color: #FED766;
+    margin: 0 0 1em;
+}
+
+form p {
+  display: flex;
+}
+
+.name-email {
+  justify-content: space-between;
+}
+
+.radio {
+  align-self: center;
+  margin-left: 1em;
+}
+
+.contact button {
+  background: #FED766;
+  border: none;
+  color: white;
+  margin-top: 3em;
+}
