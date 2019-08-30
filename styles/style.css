@@ -3,7 +3,7 @@ body, html {
   font-family: 'Open Sans', sans-serif;
   margin: 0;
   font-size: 1em;
-  color: #395C6B;
+  color: #444;
 }
 
 ul, li {
@@ -12,7 +12,7 @@ ul, li {
 }
 
 a {
-  color: #00D9C0;
+  color: #f76c6c;
   text-decoration: none;
 }
 
@@ -23,7 +23,7 @@ h1, h2, h4 {
 h1 {
   /* text-transform: uppercase; */
   font-size: 5em;
-  color: #00D9C0;
+  color: #444;
   line-height: 1.2;
   margin: .5em 0;
 }
@@ -62,7 +62,7 @@ input, textarea {
   outline: none;
   border: none;
 }
-
+/* 
 input[type=radio] {
   border: 2px solid #FED766;
   padding: 1em;
@@ -70,25 +70,26 @@ input[type=radio] {
 
 input[type=radio]:checked {
   background: #FED766;
-}
+} */
 
 input[type=text],
 input[type=email],
 textarea {
-  border-bottom: 2px solid #395C6B;
+  border-bottom: 2px solid white;
   font-size: 1em;
-  color: #395C6B;
+  color: white;
 }
 
 input[type=text],
 input[type=email] {
   flex-basis: 45%;
+  line-height: 2;
 }
 
 input[type=text]::-webkit-input-placeholder,
 input[type=email]::-webkit-input-placeholder,
 textarea::-webkit-input-placeholder {
-  color: #395C6B;
+  color: white;
 }
 
 textarea {
@@ -131,7 +132,7 @@ textarea {
 
 .line-crumb:after {
   content: "";
-  background-color: #00D9C0;
+  background-color: #f76c6c;
   padding: .07em 4em;
   position: absolute;
   top: .6em;
@@ -139,7 +140,7 @@ textarea {
 }
 
 .line-crumb {
-  color: #00D9C0;
+  color: #f76c6c;
   font-weight: 800;
 }
 
@@ -170,14 +171,14 @@ textarea {
 
 .about button:first-child {
   margin-right: 1em;
-  background: #00D9C0;
-  color: #FFFCF9;
+  background: #f76c6c;
+  color: white;
   border: none;
 }
 
 .about button:last-child {
-  border: 2px solid #00D9C0;
-  color: #00D9C0;
+  border: 2px solid #f76c6c;
+  color: #f76c6c;
 }
 
 /* services section */
@@ -198,7 +199,8 @@ textarea {
 }
 
 .services h5 {
-  color: #00D9C0;
+  color: #f76c6c;
+  text-transform: uppercase;
 }
 
 .services {
@@ -206,12 +208,15 @@ textarea {
   grid-template-rows: [row1] 30% [row2] 55% [row3] 15%;
   grid-template-areas: "first . ." ". . second" "last last last";
   /* border-top: 4px solid #F59CA9; */
+  background: #24305e;
+  color: white;
 }
 
 /* portfolio section */
 .portfolio__row1 {
   grid-area: first;
   overflow: hidden;
+  /* grid-row: 1 / span 2; */
 }
 
 .portfolio__col2 {
@@ -220,6 +225,7 @@ textarea {
 
 .portfolio__col3 {
   grid-area: last;
+  border-top: 2px solid #24305e;
 }
 
 .portfolio__col2,
@@ -227,26 +233,26 @@ textarea {
   display: flex;
   flex-direction: column;
   justify-content: start;
-  padding: 3em 0;
+  margin: 2em 0;
   /* border-top: 2px solid #049A8F; */
-}
-
-.portfolio h2 {
-  color: white;
 }
 
 .portfolio {
   grid-template-rows: [row1] 80% [row2] 20%;
-  grid-template-columns: [col1] 4fr [col2] 3fr;
+  grid-template-columns: [col1] 4fr [col2] 4fr;
   grid-template-areas: "first first" "second last";
+  background: #a8d0e6;
+  color: #24305e;
 }
 
-.portfolio-one {
-  background: #00D9C0;
+.portfolio h2 {
+  color: #24305e;
 }
 
-.portfolio-two {
-  background: #FED766;
+.portfolio h3 {
+  text-transform: uppercase;
+  color: white;
+  margin: 0;
 }
 
 /* contact section */
@@ -261,11 +267,12 @@ textarea {
 .contact {
   grid-template-columns: [col1] 1.5fr [col2] 1fr [col3] 3fr;
   grid-template-areas: "first . second";
+  background: #f76c6c;
+  color: white;
 }
 
 .contact h2 {
-  color: #FED766;
-    margin: 0 0 1em;
+  margin: 0 0 1em;
 }
 
 form p {
@@ -282,8 +289,8 @@ form p {
 }
 
 .contact button {
-  background: #FED766;
-  border: none;
+  background: none;
+  border: 2px solid white;
   color: white;
   margin-top: 3em;
 }
