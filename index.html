@@ -14,23 +14,23 @@
           <div class="about__text">
             <h1>Vanina Tsoneva</h1>
             <h3>web designer & developer</h3>
-            <p class="bigger-p">I design and develop landing pages, websites, and e-commerce solutions</p>
+            <p class="bigger-p">I design and develop landing pages, custom websites, e-commerce solutions, and magazine/blog platforms</p>
           </div>
           <div class="about__buttons">
-            <button class="button__monochrome">View my work</button>
-            <button class="button__color">Hire me</button>
+            <button class="button__monochrome scroll" data-target="portfolio-one">View my work</button>
+            <button class="button__color scroll" data-target="contact">Hire me</button>
           </div>
         </div>
         <div class="item details about__row2">
           <div class="info">
             <span class="line-crumb">I am</span>
           </div>
-          <span>Currently freelancing. Previously at VICE</span>
-          <span>in Berlin</span>
-          <span>+49 174 7086779</span>
-          <span>vtsoneva@gmail.com</span>
-          <a href="#">GitHub</a>
-          <a href="#">Linkedin</a>
+          <span class="animate" data-animation="from-bottom">Currently freelancing. Previously at VICE</span>
+          <span class="animate" data-animation="from-bottom">in Berlin</span>
+          <span class="animate" data-animation="from-bottom">+49 174 7086779</span>
+          <span class="animate" data-animation="from-bottom">vtsoneva@gmail.com</span>
+          <a class="animate" data-animation="from-bottom"  href="#">GitHub</a>
+          <a class="animate" data-animation="from-bottom"  href="#">Linkedin</a>
         </div>
       </div>
 
@@ -43,19 +43,19 @@
         
         <div class="item services__col2">
           <ul>
-            <li>
+            <li class="animate" data-animation="opacity">
               <h5>Landing pages</h5>
               <p>Already have a website? Let’s determine what’s working for you and what’s holding you back.</p>
             </li>
-            <li>
+            <li class="animate" data-animation="opacity">
               <h5>Web apps with a CMS so you can update your site</h5>
               <p>Looking to launch a website or need something changed on your current site? We’ve got your back.</p>
             </li>
-            <li>
+            <li class="animate" data-animation="opacity">
               <h5>Ecommerce</h5>
               <p>Every website needs regular updates, security checks, backups, and optimization. Neglecting your website will lead to lower performance.</p>
             </li>
-            <li>
+            <li class="animate" data-animation="opacity">
               <h5>Custom web apps</h5>
               <p>Logos, business cards, brochures, magazine layout, newsletter layout, and more.</p>
             </li>
@@ -82,7 +82,7 @@
       <div class="grid portfolio portfolio-one">
         <div class="item portfolio__row1">
           <h2>Viceland</h2>
-          <img src="assets/viceland-screens.jpg" />
+          <img class="animate" data-animation="from-left" src="assets/viceland-screens.jpg" />
         </div>
         <div class="item portfolio__col2">
           <h3>front end development</h3>
@@ -97,7 +97,7 @@
       <div class="grid portfolio portfolio-two">
         <div class="item portfolio__row1">
           <h2>Broadly</h2>
-          <img src="assets/broadly-screens.jpg" />
+          <img class="animate" data-animation="from-left" src="assets/broadly-screens.jpg" />
         </div>
         <div class="item portfolio__col2">
           <h3>front end development</h3>
@@ -122,28 +122,6 @@
         </div>
         <div class="item contact__col2">
           <form name="contact" method="POST" data-netlify="true">
-            <!-- <h3>Is The Project</h3>
-            <p>
-              <input type="radio" name="complexity" />
-              <label class="radio" for="complexity">a landing page</label>
-            </p>
-            <p>
-              <input type="radio" name="complexity" />
-              <label class="radio" for="complexity">a website or a landing page with multiple sections/pages</label>
-            </p>
-            <p>
-              <input type="radio" name="complexity" />
-              <label class="radio" for="complexity">ecommerce or custom web application</label>
-            </p>
-            <h3>Do you need a CMS</h3>
-            <p>
-              <input type="radio" name="cms" />
-              <label class="radio" for="cms">yes</label>
-            </p> -->
-            <!-- <p>
-              <input type="radio" name="cms" />
-              <label class="radio" for="cms">no</label>
-            </p> -->
              <p>
               <textarea name="message" placeholder="tell me about your project"></textarea>
              </p>
@@ -158,5 +136,33 @@
         </div>
       </div>
     </div>
+
+    <script>
+
+    // smooth scrolling
+    const links = document.querySelectorAll('.scroll');
+    
+    links.forEach(link => {
+      link.addEventListener('click', (event) => {
+        document.querySelector(`.${link.dataset.target}`).scrollIntoView({
+          behavior: 'smooth'
+          });
+        })
+    });
+
+    // animations
+    const width_animations = document.querySelectorAll('.animate');
+
+    width_animations.forEach(animation => {
+      observer = new IntersectionObserver((animation) => {
+        if(animation[0].intersectionRatio > 0) {
+          
+          animation[0].target.classList.add(`${animation[0].target.dataset.animation}`)
+        }
+      })
+      observer.observe(animation)
+    });
+
+    </script>
   </body>
 </html>
