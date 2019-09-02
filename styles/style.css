@@ -346,11 +346,7 @@ textarea {
   grid-area: second;
 }
 
-.contact h2 {
-  margin: 0 0 1em;
-}
-
-.contact article>p:nth-of-type(2) {
+.contact article > p:nth-of-type(2) {
   color: #f76c6c;
 }
 
