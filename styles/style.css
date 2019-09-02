@@ -484,6 +484,7 @@ form p {
     grid-template-columns: [col1] 3fr [col2] 4fr;
     column-gap: 3em;
     grid-template-areas: "first second";
+    padding: 5em;
   }
 }
 
