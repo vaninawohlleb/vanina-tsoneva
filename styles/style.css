@@ -214,6 +214,7 @@ textarea {
 }
 
 .about {
+  background: yellow;
   border-bottom: 2px solid #f76c6c;
   grid-template-columns: 100%;
   grid-template-rows: [row1] 85% [row2] 8vh;
