@@ -420,10 +420,6 @@ form p {
 
 /* media queries */
 @media (min-width: 600px) {
-  .about {
-    background: yellow;
-  }
-
   .about .details {
     justify-content: space-between;
   }
@@ -497,10 +493,6 @@ form p {
 } */
 
 @media (min-width: 1120px) {
-  .about {
-    background: blue;
-  }
-  
   .info {
     display: block;
     flex-basis: 10em;
