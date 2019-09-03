@@ -187,28 +187,28 @@ textarea {
   opacity: 0;
 }
 
-.about .details > span:first-of-type {
+.about .details>span:first-of-type {
   animation-delay: .5s;
   display: none;
 }
 
-.about .details > span:nth-of-type(2) {
+.about .details>span:nth-of-type(2) {
   animation-delay: 1s;
   display: none;
 }
 
-.about .details > span:nth-of-type(3) {
+.about .details>span:nth-of-type(3) {
   animation-delay: 1.5s;
   display: inline-block;
   margin-right: 2em;
 }
 
-.about .details > span:nth-of-type(4) {
+.about .details>span:nth-of-type(4) {
   animation-delay: 2s;
   display: inline-block;
 }
 
-.about .details > a {
+.about .details>a {
   animation-delay: 2.5s;
   display: none;
 }
@@ -346,7 +346,7 @@ textarea {
   grid-area: second;
 }
 
-.contact article> p:nth-of-type(2) {
+.contact article>p:nth-of-type(2) {
   color: #f76c6c;
 }
 
@@ -420,6 +420,16 @@ form p {
 
 /* media queries */
 @media (min-width: 600px) {
+  .about {
+    border-bottom: 2px solid #f76c6c;
+    grid-template-columns: 100%;
+    grid-template-rows: [row1] 85% [row2] 8vh;
+    grid-template-areas:
+      "first ."
+      "last last"
+
+    }
+
   .about .details {
     justify-content: space-between;
   }
