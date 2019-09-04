@@ -414,6 +414,10 @@ textarea {
   animation-delay: 1s;
 }
 
+.portfolio__two h2 {
+  margin-top: .6em;
+}
+
 .separation-line {
   background: transparent;
   height: 0;
@@ -637,17 +641,17 @@ form p {
     display: flex;
   }
 
-  .services__col1 {
+  .services__col1,
+  .services__col2 {
     margin-top: 0;
   }
 
   .services {
-    -ms-grid-columns: [col1] 3fr [col2] 4fr;
+    /* -ms-grid-columns: [col1] 3fr [col2] 4fr;
     grid-template-columns: [col1] 3fr [col2] 4fr;
-    grid-template-areas: "first . "". second""last last";
-    grid-row-gap: 1.25em;
-    -ms-grid-rows: [row1] 30% [row2] 55% [row3] 12vh;
-    grid-template-rows: [row1] 30% [row2] 55% [row3] 12vh;
+    grid-template-areas: "first . "". second""last last"; */
+    -ms-grid-rows: [row1] 30% [row2] 55% [row3] 10vh;
+    grid-template-rows: [row1] 30% [row2] 55% [row3] 10vh;
   }
 
   .portfolio {
@@ -670,7 +674,6 @@ form p {
     -moz-column-gap: 3em;
     column-gap: 3em;
     grid-template-areas: "first second";
-    padding: 5em;
   }
 
   .services>.services__col1 {
@@ -760,6 +763,10 @@ form p {
     -ms-grid-columns: [col1] 1.5fr [col2] 1fr [col3] 3fr;
     grid-template-columns: auto;
     grid-template-areas: "first . ."". . second""last last last";
+  }
+
+  .services__col2 {
+    margin-top: 0;
   }
 
   .portfolio__two {
