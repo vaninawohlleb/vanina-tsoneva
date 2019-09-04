@@ -28,7 +28,7 @@ h1 {
   font-size: 3em;
   color: #444;
   line-height: 1.2;
-  margin: .5em 0;
+  margin: 1em 0 .5em;
 }
 
 h2 {
@@ -282,6 +282,7 @@ textarea {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   grid-area: second;
+  margin-top: 5em;
 }
 
 .services__row3 {
@@ -333,9 +334,6 @@ textarea {
 .services {
   -ms-grid-columns: 100%;
   grid-template-columns: 100%;
-  -ms-grid-rows: [row1] 30% [row2] 55% [row3] 12vh;
-  grid-template-rows: [row1] 30% [row2] 55% [row3] 12vh;
-  grid-row-gap: 5em;
   grid-template-areas: "first""second""last";
   background: #24305e;
   color: white;
@@ -639,11 +637,17 @@ form p {
     display: flex;
   }
 
+  .services__col1 {
+    margin-top: 0;
+  }
+
   .services {
     -ms-grid-columns: [col1] 3fr [col2] 4fr;
     grid-template-columns: [col1] 3fr [col2] 4fr;
     grid-template-areas: "first . "". second""last last";
     grid-row-gap: 1.25em;
+    -ms-grid-rows: [row1] 30% [row2] 55% [row3] 12vh;
+    grid-template-rows: [row1] 30% [row2] 55% [row3] 12vh;
   }
 
   .portfolio {
