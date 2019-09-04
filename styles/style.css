@@ -25,7 +25,7 @@ h4 {
 }
 
 h1 {
-  font-size: 5em;
+  font-size: 3em;
   color: #444;
   line-height: 1.2;
   margin: .5em 0;
@@ -179,6 +179,7 @@ textarea {
 
 .about__buttons {
   margin: 2em 0;
+  font-size: .8em;
 }
 
 .about button:first-child {
@@ -334,6 +335,7 @@ textarea {
   grid-template-columns: 100%;
   -ms-grid-rows: [row1] 30% [row2] 55% [row3] 12vh;
   grid-template-rows: [row1] 30% [row2] 55% [row3] 12vh;
+  grid-row-gap: 5em;
   grid-template-areas: "first""second""last";
   background: #24305e;
   color: white;
@@ -601,6 +603,10 @@ form p {
 }
 
 @media (min-width: 800px) {
+  h1 {
+    font-size: 5em;
+  }
+
   .grid {
     padding: 3em 5em 1em;
   }
@@ -614,9 +620,13 @@ form p {
     padding: 2.5em 0;
   }
 
+  .about__buttons {
+    font-size: 1em;
+  }
+
   .about {
-    -ms-grid-columns: [col1] 4fr [col2] 3fr;
-    grid-template-columns: [col1] 4fr [col2] 3fr;
+    -ms-grid-columns: [col1] 6fr [col2] 3fr;
+    grid-template-columns: [col1] 6fr [col2] 3fr;
   }
 
   .details {
@@ -633,6 +643,7 @@ form p {
     -ms-grid-columns: [col1] 3fr [col2] 4fr;
     grid-template-columns: [col1] 3fr [col2] 4fr;
     grid-template-areas: "first . "". second""last last";
+    grid-row-gap: 1.25em;
   }
 
   .portfolio {
@@ -727,8 +738,8 @@ form p {
   }
 
   .about {
-    -ms-grid-columns: [col1] 3fr [col2] 5fr;
-    grid-template-columns: [col1] 3fr [col2] 5fr;
+    -ms-grid-columns: [col1] 4fr [col2] 5fr;
+    grid-template-columns: [col1] 4fr [col2] 5fr;
   }
 
   .about__col1 {
@@ -743,7 +754,7 @@ form p {
 
   .services {
     -ms-grid-columns: [col1] 1.5fr [col2] 1fr [col3] 3fr;
-    grid-template-columns: [col1] 1.5fr [col2] 1fr [col3] 3fr;
+    grid-template-columns: auto;
     grid-template-areas: "first . ."". . second""last last last";
   }
 
@@ -761,12 +772,6 @@ form p {
   }
 
   .services>.services__col1 {
-    -ms-grid-row: 1;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 1;
-  }
-
-  .contact>.services__col1 {
     -ms-grid-row: 1;
     -ms-grid-column: 1;
     -ms-grid-column-span: 1;
