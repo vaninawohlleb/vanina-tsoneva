@@ -252,8 +252,8 @@ textarea {
   border-bottom: 2px solid #f76c6c;
   -ms-grid-columns: 100%;
   grid-template-columns: 100%;
-  -ms-grid-rows: [row1] 85% [row2] 8vh;
-  grid-template-rows: [row1] 85% [row2] 8vh;
+  -ms-grid-rows: [row1] 88% [row2] 8vh;
+  grid-template-rows: [row1] 88% [row2] 8vh;
   grid-template-areas:
     "first ."
     "last last"
@@ -623,7 +623,7 @@ form p {
   }
 
   .about__col1 {
-    padding: 2.5em 0;
+    padding: 2em 0 1em;
   }
 
   .about__buttons {
