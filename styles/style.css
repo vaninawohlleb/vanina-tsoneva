@@ -25,8 +25,13 @@ h4 {
 }
 
 h1 {
-  font-size: 3em;
-  color: #374785;
+  font-size: 8em;
+  color: #fff;
+  /*
+  
+  #374785
+  
+  */
   line-height: 1.2;
   margin: 1em 0 .5em;
 }
@@ -38,6 +43,7 @@ h2 {
 
 h3 {
   font-size: 1.5em;
+  text-transform: uppercase;
 }
 
 h5 {
@@ -111,7 +117,8 @@ textarea {
 .grid {
   display: -ms-grid;
   display: grid;
-  background: white;
+  background: #060099;
+  /* #cbd0d3; */
   grid-column-gap: 1.25em;
   grid-row-gap: 1.25em;
   padding: 2em;
@@ -172,6 +179,10 @@ textarea {
   -webkit-box-pack: end;
   -ms-flex-pack: end;
   justify-content: flex-end;
+}
+
+.about__col2 {
+  grid-area: second;
 }
 
 .about__row2 {
@@ -622,7 +633,7 @@ form p {
 
 @media (min-width: 800px) {
   h1 {
-    font-size: 5em;
+    font-size: 9em;
   }
 
   .grid {
@@ -761,8 +772,9 @@ form p {
   }
 
   .about {
-    -ms-grid-columns: [col1] 4fr [col2] 5fr;
-    grid-template-columns: [col1] 4fr [col2] 5fr;
+    -ms-grid-columns: [col1] 5fr [col2] 3fr;
+    grid-template-columns: [col1] 5fr [col2] 3fr;
+    grid-template-areas: "first second""last last"
   }
 
   .about__col1 {
