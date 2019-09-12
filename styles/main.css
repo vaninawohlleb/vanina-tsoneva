@@ -75,9 +75,15 @@ p {
 /* full width link*/
 .full-width-link {
   display: block;
-  margin: 0 4em;
+  margin: 0 1.25em;
   border-bottom: 5px solid #334261;
   padding-top: 4em;
+}
+
+@media (min-width: 600px) {
+  .full-width-link {
+    margin: 0 4em;
+  }
 }
 
 @media (min-width: 800px) {
@@ -94,7 +100,7 @@ p {
 .details {
   display: -ms-grid;
   display: grid;
-  padding: 4em;
+  padding: 1.25em;
   margin-top: 8em;
   background: #334261;
   color: white;
@@ -105,6 +111,7 @@ p {
 
 @media (min-width: 600px) {
   .details {
+    padding: 4em;
     -ms-grid-columns: [col1] 5fr [col2] 3fr;
         grid-template-columns: [col1] 5fr [col2] 3fr;
   }
@@ -178,7 +185,13 @@ p {
   -ms-grid-columns: 100%;
       grid-template-columns: 100%;
       grid-template-areas: "second" "first";
-  padding: 3em 4em;
+  padding: 1.25em;
+}
+
+@media (min-width: 600px) {
+  .about {
+    padding: 3em 4em;
+  }
 }
 
 @media (min-width: 1000px) {
@@ -249,9 +262,15 @@ p {
   -ms-grid-columns: 100%;
       grid-template-columns: 100%;
       grid-template-areas: "first" "second" "third";
-  padding: 1.25em 4em 0;
+  padding: 1.25em;
   background: #f9c956;
   color: #334261;
+}
+
+@media (min-width: 600px) {
+  .portfolio {
+    padding: 1.25em 4em 0;
+  }
 }
 
 @media (min-width: 800px) {

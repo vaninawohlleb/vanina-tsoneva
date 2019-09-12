@@ -8,8 +8,6 @@ $biggest-gap: 4em;
 $accent-color: #334261;
 $main-color: #f9c956;
 
-$breakpoint-phone: 600px;
-
 body,
 html {
   margin: 0;
@@ -82,9 +80,13 @@ p {
 /* full width link*/
 .full-width-link {
   display: block;
-  margin: 0 $biggest-gap;
+  margin: 0 $small-gap;
   border-bottom: 5px solid $accent-color;
   padding-top: $biggest-gap;
+
+  @media(min-width: 600px) {
+    margin: 0 $biggest-gap;
+  }
 
   @media(min-width: 800px) {
     padding-top: $biggest-gap * 2;
@@ -98,13 +100,14 @@ p {
 /* tech and contact sections */
 .details {
   display: grid;
-  padding: $biggest-gap;
+  padding: $small-gap;
   margin-top: $biggest-gap * 2;
   background: $accent-color;
   color: white;
   grid-template-columns: 100%;
 
   @media(min-width: 600px) {
+    padding: $biggest-gap;
     grid-template-columns: [col1] 5fr [col2] 3fr;
   }
 
@@ -168,7 +171,11 @@ p {
 .about {
   grid-template-columns: 100%;
   grid-template-areas: "second" "first";
-  padding: $big-gap $biggest-gap;
+  padding: $small-gap;
+
+  @media(min-width: 600px) {
+    padding: $big-gap $biggest-gap;
+  }
 
   @media(min-width: 1000px) {
     grid-template-columns: [col1] 5fr [col2] 3fr;
@@ -221,9 +228,13 @@ p {
   "first"
   "second"
   "third";
-  padding: $small-gap $biggest-gap 0;
+  padding: $small-gap;
   background: $main-color;
   color: $accent-color;
+
+  @media(min-width: 600px) {
+    padding: $small-gap $biggest-gap 0;
+  }
 
   @media(min-width: 800px) {
     grid-template-columns: repeat(4, 23.9%);
@@ -258,20 +269,3 @@ p {
     }
   }
 }
-
-
-@media (min-width: $breakpoint-phone) {
-
-}
-
-@media screen and(min-width: 800px) {
-
-
-}
-
-@media screen and(min-width: 1000px) {
-
-
-}
-
-@media screen and(min-width: 1200px) {}
