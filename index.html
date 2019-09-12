@@ -129,6 +129,13 @@
                 animation[0].target.dataset.completed = anim.completed;
               }
             }).add({
+              targets: '.about h1',
+              opacity: [0, 1],
+              duration: 2,
+              complete: function (anim) {
+                animation[0].target.dataset.completed = anim.completed;
+              }
+            }, '-=4000').add({
               targets: '.about .about__text',
               opacity: [0, 1],
               duration: 2000,
@@ -144,7 +151,7 @@
             translateY: [-500, 0],
             easing: "easeOutExpo",
             duration: 1000,
-            delay: anime.stagger(300, { start: 400 }),
+            delay: anime.stagger(300, { start: 700 }),
             complete: function (anim) {
               animation[0].target.dataset.completed = anim.completed;
             }
@@ -157,7 +164,7 @@
             translateY: [-500, 0],
             easing: "easeOutExpo",
             duration: 1000,
-            delay: anime.stagger(300, { start: 400 }),
+            delay: anime.stagger(300, { start: 700 }),
             complete: function (anim) {
               animation[0].target.dataset.completed = anim.completed;
             }

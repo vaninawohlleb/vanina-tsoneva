@@ -189,6 +189,10 @@ p {
   }
 }
 
+.about h1 {
+  opacity: 0;
+}
+
 .about .item:first-of-type {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
