@@ -141,10 +141,10 @@
           anime({
             targets: '.portfolio__one img',
             opacity: [0, 1],
-            translateY: [-800, 0],
+            translateY: [-500, 0],
             easing: "easeOutExpo",
-            duration: 2100,
-            delay: anime.stagger(300, { start: 200 }),
+            duration: 1000,
+            delay: anime.stagger(300, { start: 400 }),
             complete: function (anim) {
               animation[0].target.dataset.completed = anim.completed;
             }
@@ -154,10 +154,10 @@
           anime({
             targets: '.portfolio__two img',
             opacity: [0, 1],
-            translateY: [-800, 0],
+            translateY: [-500, 0],
             easing: "easeOutExpo",
-            duration: 2100,
-            delay: anime.stagger(300, { start: 200 }),
+            duration: 1000,
+            delay: anime.stagger(300, { start: 400 }),
             complete: function (anim) {
               animation[0].target.dataset.completed = anim.completed;
             }
