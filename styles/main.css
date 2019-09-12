@@ -224,6 +224,7 @@ p {
 .about .item .about__text {
   font-size: 1.1em;
   color: #334261;
+  opacity: 0;
 }
 
 @media (min-width: 1000px) {
@@ -255,6 +256,10 @@ p {
         grid-template-columns: repeat(4, 23.9%);
         grid-template-areas: ". . first first" "second second third third";
   }
+}
+
+.portfolio img {
+  opacity: 0;
 }
 
 .portfolio .item {
