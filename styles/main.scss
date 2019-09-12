@@ -1,0 +1,273 @@
+$body-font: 'Roboto', sans-serif;
+$headings-font: 'Playfair Display', serif;
+
+$small-gap: 1.25em;
+$big-gap: 3em;
+$biggest-gap: 4em;
+
+$accent-color: #334261;
+$main-color: #f9c956;
+
+$breakpoint-phone: 600px;
+
+body,
+html {
+  margin: 0;
+  font-family: $body-font;
+  color: $accent-color;
+  background: $main-color;
+}
+
+ul,
+li {
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h4 {
+  font-family: $headings-font;
+}
+
+h1 {
+  font-size: 5em;
+  margin: 1em auto 0;
+  color: white;
+  line-height: 1;
+
+  @media(min-width: 800px) {
+    font-size: 8em;
+    margin: 0;
+  }
+}
+
+h2 {
+  font-size: 2em;
+}
+
+h3 {
+  font-family: $body-font;
+  font-weight: 700;
+}
+
+img {
+  max-width: 100%;
+  align-self: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  line-height: 1.5;
+}
+
+.wrapper {
+  display: block;
+  overflow: hidden;
+}
+
+.grid {
+  display: grid;
+  grid-column-gap: $small-gap;
+  grid-row-gap: $small-gap;
+}
+
+/* full width link*/
+.full-width-link {
+  display: block;
+  margin: 0 $biggest-gap;
+  border-bottom: 5px solid $accent-color;
+  padding-top: $biggest-gap;
+
+  @media(min-width: 800px) {
+    padding-top: $biggest-gap * 2;
+  }
+  
+  a {
+    color: $accent-color;
+  }
+}
+
+/* tech and contact sections */
+.details {
+  display: grid;
+  padding: $biggest-gap;
+  margin-top: $biggest-gap * 2;
+  background: $accent-color;
+  color: white;
+  grid-template-columns: 100%;
+
+  @media(min-width: 600px) {
+    grid-template-columns: [col1] 5fr [col2] 3fr;
+  }
+
+  .item {
+    display: flex;
+    flex-direction: column;
+    padding: $small-gap;
+    line-height: 1.5;
+  }
+
+  /* line in details */
+  .index {
+    position: relative;
+
+    h2 {
+      &:after {
+        content: "";
+        padding: .07em 2.5em;
+        position: absolute;
+        bottom: 45%;
+        margin-left: .8em;
+        background: white;
+      }
+
+      @media(min-width: 600px) {
+        &:after {
+          content: none;
+          padding: 0;
+        }
+      }
+
+      @media(min-width: 800px) {
+        &:after {
+          content: "";
+          padding: .07em 2.5em;
+          position: absolute;
+          bottom: 45%;
+          margin-left: .8em;
+          background: white;
+        }
+      }
+    }
+  }
+
+  a {
+    color: $main-color;
+  }
+
+  .details__text {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    span, a {
+      margin-right: $small-gap;
+    }
+  }
+}
+
+/* about section */
+.about {
+  grid-template-columns: 100%;
+  grid-template-areas: "second" "first";
+  padding: $big-gap $biggest-gap;
+
+  @media(min-width: 1000px) {
+    grid-template-columns: [col1] 5fr [col2] 3fr;
+    grid-template-areas: ". first"'second .';
+  }
+
+  .item {
+    &:first-of-type {
+      grid-area: first;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    &:nth-of-type(2) {
+      grid-area: second;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .about__text {
+      font-size: 1.1em;
+      color: $accent-color;
+      // transform: translateX(-150%);
+      // opacity: 0;
+
+      @media (min-width: 1000px) {
+        text-align: right;
+      }
+
+      h2 {
+        color: white
+      }
+
+      p:first-of-type {
+        font-weight: 700;
+      }
+    }
+  }
+}
+
+.portfolio {
+  grid-template-columns: 100%;
+  grid-template-areas: 
+  "first"
+  "second"
+  "third";
+  padding: $small-gap $biggest-gap 0;
+  background: $main-color;
+  color: $accent-color;
+
+  @media(min-width: 800px) {
+    grid-template-columns: repeat(4, 23.9%);
+    grid-template-areas: ". . first first"
+    "second second third third";
+  }
+
+  // img {
+  //   opacity: 0;
+  // }
+  
+  .item {
+    display: flex;
+
+    &:first-of-type {
+      grid-area: first;
+    }
+
+    &:nth-of-type(2) {
+      grid-area: second;
+      margin-top: $biggest-gap;
+      overflow: hidden;
+    }
+
+    &:nth-of-type(3) {
+      grid-area: third;
+      overflow: hidden;
+
+      @media(min-width: 600px) {
+        margin-top: $biggest-gap;
+      } 
+    }
+  }
+}
+
+
+@media (min-width: $breakpoint-phone) {
+
+}
+
+@media screen and(min-width: 800px) {
+
+
+}
+
+@media screen and(min-width: 1000px) {
+
+
+}
+
+@media screen and(min-width: 1200px) {}
