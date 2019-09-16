@@ -4,152 +4,186 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <title>Vanina Tsoneva | Designer & Full stack developer</title>
-    <link href="styles/style.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,800|Playfair+Display:900=swap"
-      rel="stylesheet">
+    <link href="styles/main.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:900|Roboto:400,700=swap" rel="stylesheet">
   </head>
   <body>
     <div class="wrapper">
-      <div class="grid about">
-        <div class="item about__row1 about__col1">
+
+      <div class="grid about animate" data-animation="about">
+        <div class="item">
           <div class="about__text">
-            <h1>Vanina Tsoneva</h1>
-            <h3>Designer & Full stack developer</h3>
-            <p class="bigger-p">I have been designing and developing web applications for 5+ years</p>
-          </div>
-          <div class="about__buttons">
-            <button class="button__monochrome scroll" data-target="portfolio__one">View my work</button>
-            <button class="button__color scroll" data-target="contact">Get in touch</button>
+            <h2>Full stack developer</h2>
+            <p>Currently freelancing and available for projects. Previously at VICE</p>
+            <p>I have been designing and developing web applications for 5+ years. I work with startups, creative agencies, and entrepreneurs in designing and developing their custom apps and interfaces and setting up application architecture and deployment processes.</p>
           </div>
         </div>
-        <div class="item details about__row2">
-          <div class="info">
-            <span class="line-crumb">I am</span>
-          </div>
-          <span class="animate" data-animation="from-bottom">Currently freelancing. Previously at VICE</span>
-          <span class="animate" data-animation="from-bottom">in Berlin</span>
-          <span class="animate" data-animation="from-bottom">+49 174 7086779</span>
-          <span class="animate" data-animation="from-bottom">vtsoneva@gmail.com</span>
-          <a class="animate" data-animation="from-bottom"  href="https://github.com/vaninawohlleb" target="_blank">GitHub</a>
-          <a class="animate" data-animation="from-bottom"  href="https://www.linkedin.com/in/vaninatsoneva" target="_blank">Linkedin</a>
+        <div class="item">
+          <h1>Vanina Tsoneva</h1> 
         </div>
       </div>
 
-      <div class="grid services">
-        <div class="item services__col1">
-          <p class="bigger-p">I have years of experience building custom apps and interfaces, setting up application architecture and deployment processes, agile product management and workflows. I work with startups, creative agencies, and entrepreneurs in designing and developing their web apps to increase conversions, page visits, and session lengths. At the moment, I am interested in the role motion plays in web experiences and digital story telling. </p>
+      <div class="full-width-link">
+        <a href="https://viceland.vice.com" target="_blank">
+          <h2>viceland.vice.com</h2>
+        </a>
+      </div>
+
+      <div class="grid portfolio portfolio__one animate" data-animation="portfolio__one">
+        <div class="item portfolio__text">
+          <p>As a developer on VICE's Viceland team, I was responsible for the front end implementation of features planned for the launch. These included small modules, such as the front page carousel, but also bigger changes and features. Viceland's launch was part of the unification of all VICE's verticals, which included rewriting all front end apps into React.js and making the code base reusable between verticals. This way we could have new features and bug fixes implemented through  the whole system, instead of implementing them one by one for each vertical. Tech: React.js
+          </p>
         </div>
-        
-        <div class="item services__col2">
-          <ul>
-            <li class="animate" data-animation="opacity">
-              <h5>Landing pages</h5>
-              <p>An HTML/CSS/JS one or multiple section page about your product or service. Fast loading times, fast delivery, integrations with APIs</p>
-            </li>
-            <li class="animate" data-animation="opacity">
-              <h5>Web apps with Headless CMS</h5>
-              <p>A web app using the JAMstack, so you can update at your own convenience. The data is separate of your app and can be used for different services and applications</p>
-            </li>
-            <li class="animate" data-animation="opacity">
-              <h5>Custom web apps</h5>
-              <p>Full stack development for more complex functionality. For more specific needs, integrations with specific APIs, or complex architecture</p>
-            </li>
-          </ul>
+        <div class="item">
+          <img src="assets/viceland.jpg"></img>
         </div>
-        <div class="item details services__row3">
-          <div class="info">
-            <span class="line-crumb">Tech</span>
+        <div class="item">
+          <img src="assets/gaycation.png"></img>
+        </div>
+      </div>
+
+      <div class="full-width-link">
+        <a href="https://viceland.vice.com" target="_blank">
+          <h2>broadly.vice.com</h2>
+        </a>
+      </div>
+      <div class="grid portfolio portfolio__two animate" data-animation="portfolio__two">
+        <div class="item portfolio__text">
+          <p>As a team lead for the launch of Broadly I was responsible for making sure the final edits on design and
+            functionality are implemented just before the official launch. This meant development, but also assisting in deploys,
+            code reviews, and feature prioritization. Broadly's launch was one of the last launches on the Laravel CMS,
+            and just before we started the unification process. Its front end look and feel were very different than all
+            other verticals, and included implementing features for a very first time. Tech: Laravel, Vue.js, Stylus.
+          </p>
+        </div>
+        <div class="item">
+          <img src="assets/broadly-og.jpeg"></img>
+        </div>
+        <div class="item">
+          <img src="assets/old-broadly.png"></img>
+        </div>
+      </div>
+
+
+      <div class="details animate" data-animation="details">
+        <div class="item">
+          <span class="index">
+            <h2>Tech</h2>
+          </span>
+          <div class="details__text">
+            <span>Javascript</span>
+            <span>PHP</span>
+            <span>HTML</span>
+            <span>CSS preprocessors</span>
+            <span>JAMStack</span>
+            <span>AWS</span>
+            <span>React</span>
+            <span>Gatsby</span>
+            <span>Node</span>
+            <span>GraphQL</span>
+            <span>Headless CMS</span>
+            <span>Laravel</span>
           </div>
-          <span>Javascript</span>
-          <span>PHP</span>
-          <span>HTML/CSS</span>
-          <span>JAMStack</span>
-          <span>AWS</span>
-          <span>React</span>
-          <span>Gatsby</span>
-          <span>Node</span>
-          <span>GraphQL</span>
-          <span>Headless CMS</span>
-          <span>Laravel</span>
         </div>
-      </div>
-
-      <div class="grid portfolio portfolio__one" data-animation="background-to-pink">
-        <div class="item portfolio__row1">
-          <a href="https://viceland.vice.com" target="_blank"><h2>viceland.vice.com</h2></a>
-          <img class="animate" data-animation="from-left" src="assets/viceland-hero.jpg" />
-        </div>
-        <div class="item portfolio__col2">
-          <h3>Front end developer</h3>
-        </div>
-        <div class="item portfolio__col3">
-          <p>As a developer on the VICE's Viceland team, I was responsible for the front end implementation of features planned for the launch. These included small modules, such as the front page carousel, but also bigger changes and features.</p>
-        </div>
-      </div>
-<!-- 
-      <div class="separation-line animate" data-animation="line-animate"></div> -->
-
-      <div class="grid portfolio portfolio__two animate" data-animation="background-to-pink">
-        <div class="item portfolio__row1">
-          <a href="https://broadly.vice.com" target="_blank"><h2>broadly.vice.com</h2></a>
-          <img class="animate" data-animation="from-left" src="assets/broadly-spanish1.png" />
-        </div>
-        <div class="item portfolio__col2">
-          <h3>Full stack developer, Team Lead</h3>
-        </div>
-        <div class="item portfolio__col3">
-          <p>As a team lead for the launch of Broadly I was responsible for making sure the final edits on design and functionality are implemented just before the official launch. This meant development, but also assisting in deploys, code reviews, and feature prioritization</p>
-        </div>
-      </div>
-      <div class="grid contact">
-        <div class="item contact__col1">
-          <article>
-            <h2>Get in touch</h2>
-            <p class="bigger-p">Send me a short description of your project and I will get back to you. Please include the type of web app you think you need (landing page, web app with Headless CMS, custom web app), and the time-frame.</p>
-            <p>You can also just email me at vtsoneva@gmail.com</p>
-          </article>
-        </div>
-        <div class="item contact__col2">
-          <form name="contact" method="POST" data-netlify="true">
-             <p>
-              <textarea name="message" placeholder="tell me about your project"></textarea>
-             </p>
-            <p class="name-email">
-              <input type="text" name="name" placeholder="name" />
-              <input type="email" name="email" placeholder="email"/>
-            </p>
-            <p>
-              <button type="submit">Send</button>
-            </p>
-          </form>
-        </div>
+      
+        <div class="item">
+          <span class="index">
+            <h2>Contact</h2>
+          </span>
+          <div class="details__text">
+            <span>in Berlin</span>
+            <span>+49 174 7086779</span>
+            <span>vtsoneva@gmail.com</span>
+            <span><a href="https://github.com/vaninawohlleb" target="_blank">GitHub</a></span>
+            <span><a href="https://www.linkedin.com/in/vaninatsoneva"
+              target="_blank">Linkedin</a></span>
+            </span>
+          </div>
       </div>
     </div>
-    <script>
-    // smooth scrolling
-    const links = document.querySelectorAll('.scroll');
-    
-    links.forEach(link => {
-      link.addEventListener('click', (event) => {
-        document.querySelector(`.${link.dataset.target}`).scrollIntoView({
-          behavior: 'smooth'
-          });
-        })
-    });
-
-    // animations
-    const width_animations = document.querySelectorAll('.animate');
-
-    width_animations.forEach(animation => {
+  </body>
+  <script src="assets/anime.min.js"></script>
+  <script>
+  const animations = document.querySelectorAll('.animate');
+  
+  window.onload = (event) => {
+    animations.forEach(animation => {
       observer = new IntersectionObserver((animation) => {
-        if(animation[0].intersectionRatio > 0) {
-          
-          animation[0].target.classList.add(`${animation[0].target.dataset.animation}`)
+        if(animation[0].intersectionRatio > 0 && animation[0].target.dataset.completed !== 'true') {
+          if(animation[0].target.dataset.animation === 'about' ) {
+            var textWrapper = document.querySelector('.about h1');
+            textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+            anime.timeline()
+              .add({
+                targets: '.about .item .letter',
+                scale: [0.3, 1],
+                opacity: [0, 1],
+                translateZ: 0,
+                easing: "easeOutExpo",
+                duration: 1600,
+                delay: (el, i) => 70 * (i + 1),
+                complete: function (anim) {
+                  animation[0].target.dataset.completed = anim.completed;
+                }
+              }).add({
+                targets: '.about h1',
+                opacity: [0, 1],
+                duration: 2,
+                complete: function (anim) {
+                  animation[0].target.dataset.completed = anim.completed;
+                }
+              }, '-=4000').add({
+                targets: '.about .about__text',
+                opacity: [0, 1],
+                duration: 2000,
+                complete: function (anim) {
+                  animation[0].target.dataset.completed = anim.completed;
+                }
+              }, '-=1500');
+
+          } else if(animation[0].target.dataset.animation === 'portfolio__one') {
+            anime({
+              targets: '.portfolio__one img',
+              opacity: [0, 1],
+              translateY: [-500, 0],
+              easing: "easeOutExpo",
+              duration: 1000,
+              delay: anime.stagger(300, { start: 700 }),
+              complete: function (anim) {
+                animation[0].target.dataset.completed = anim.completed;
+              }
+            })
+          } else if (animation[0].target.dataset.animation === 'portfolio__two') {
+            console.log(animation)
+            anime({
+              targets: '.portfolio__two img',
+              opacity: [0, 1],
+              translateY: [-500, 0],
+              easing: "easeOutExpo",
+              duration: 1000,
+              delay: anime.stagger(300, { start: 700 }),
+              complete: function (anim) {
+                animation[0].target.dataset.completed = anim.completed;
+              }
+            })
+          } else if (animation[0].target.dataset.animation === 'details') {
+              anime({
+                targets: '.details__text span',
+                opacity: [0, 1],
+                translateZ: 0,
+                easing: "easeOutExpo",
+                duration: 1600,
+                delay: anime.stagger(300, { start: 100 }),
+                complete: function(anim) {
+                  animation[0].target.dataset.completed = anim.completed;
+              }
+            });
+          }
         }
       })
-      observer.observe(animation)
+      observer.observe(animation);
     });
-
-    </script>
-  </body>
+  }
+  </script>
 </html>
