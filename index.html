@@ -110,7 +110,7 @@
     animations.forEach(animation => {
       observer = new IntersectionObserver((animation) => {
         if(animation[0].intersectionRatio > 0 && animation[0].target.dataset.completed !== 'true') {
-          if(animation[0].target.dataset.animation === 'about' ) {
+          if(animation[0].target.dataset.animation === 'about') {
             var textWrapper = document.querySelector('.about h1');
             textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
 

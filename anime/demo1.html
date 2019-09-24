@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Vanina Tsoneva | Anime Background Demo</title>
+    <link href="../styles/main.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:900|Roboto:400,700=swap" rel="stylesheet">
+  </head>
+
+  <body class="anime-bgr">
+    <div class=text>Hi!</div>
+    <div class="wave-container">
+      <div class="wave">
+        <div class="items-wrapper"></div>
+      </div>
+    </div>
+  </body>
+  <script src="../assets/anime.min.js"></script>
+  <script>
+      
+      let fitOnResize = (el, padding) => {
+        var timeout = null;
+        
+        let resize = () => {
+          if(timeout) clearTimeout(timeout);
+          anime.set(el, {scale: 1});
+          
+          var pad = padding || 0;
+          var parentEl = el.parentNode;
+          var elementOffsetWidth = el.offsetWidth - pad;
+          var parentOffsetWidth = parentEl.offsetWidth;
+          var ratio = parentOffsetWidth / elementOffsetWidth;
+          timeout = setTimeout(anime.set(el, {scale: ratio}), 10);
+        }
+        resize()
+        window.addEventListener('resize', resize);
+      }
+
+      let staggeringAnimation = () => {
+        const staggeringElement = document.querySelector('.wave'),
+        itemsWrapper = document.querySelector('.items-wrapper'),
+        itemsFragment = document.createDocumentFragment(),
+        grid = [30, 10],
+        numberOfItems = grid[0] * grid[1];
+
+      var animation;
+      var paused = true;
+
+      fitOnResize(staggeringElement, 0);
+
+      for(var i = 0; i < numberOfItems; i++) {
+        var itemEl = document.createElement('div');
+        itemEl.classList.add('item');
+        itemsFragment.appendChild(itemEl);
+      }
+
+      itemsWrapper.appendChild(itemsFragment);
+
+      let play = () => {
+        paused = false;
+        if(animation) animation.pause();
+        
+        animation = anime.timeline({
+          easing: 'easeInOutQuad',
+        })
+        .add({
+          targets: '.wave .item',
+          keyframes: [
+            {
+              translateX: anime.stagger('-5px', {grid: grid, from: 'center', axis: 'x'}),
+              translateY: anime.stagger('-5px', {grid: grid, from: 'center', axis: 'y'}),
+              scale: anime.stagger([2, 1], {grid: grid, from: 'center'}),
+              duration: 500,
+            }, 
+              {opacity: anime.stagger([.5, .7, 1], {grid: grid, from: 'center', axis: 'x'})
+            },
+            {
+              translateX: 0,
+              translateY: 0,
+              scale: 1,
+              duration: 1500,
+            },
+          ], 
+          delay: anime.stagger(100, {grid: grid, from: 'first'}, 100)
+        })
+        .add({
+          targets: '.anime-bgr',
+          backgroundColor: '#64FF9D',
+          duration: 1200
+        }, '-=900')
+        .add({
+          targets: '.wave',
+          opacity: 0,
+        }, '-=1000')
+        .add({
+          targets: '.text',
+          opacity: [0, 1],
+          delay: 300,
+          duration: 500,
+        }, '-=500')
+      }
+
+      play();
+    };
+    
+    staggeringAnimation();
+  </script>
+</html>
