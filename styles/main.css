@@ -383,8 +383,8 @@ p {
 .anime-bgr .wave .items-wrapper .item {
   position: relative;
   z-index: 1;
-  width: 75px;
-  height: 42px;
+  width: 5vw;
+  height: 5.9vh;
   margin: 0;
   padding: 0;
   background: #64FF9D;
