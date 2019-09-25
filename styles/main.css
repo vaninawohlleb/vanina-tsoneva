@@ -357,7 +357,7 @@ p {
 
 .anime-bgr .wave {
   width: 1100px;
-  height: 530px;
+  height: 700px;
   -webkit-transform-origin: left;
           transform-origin: left;
 }
@@ -383,8 +383,8 @@ p {
 .anime-bgr .wave .items-wrapper .item {
   position: relative;
   z-index: 1;
-  width: 5vh;
-  height: 5.9vh;
+  width: 75px;
+  height: 42px;
   margin: 0;
   padding: 0;
   background: #64FF9D;

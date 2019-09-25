@@ -41,7 +41,7 @@
         const staggeringElement = document.querySelector('.wave'),
         itemsWrapper = document.querySelector('.items-wrapper'),
         itemsFragment = document.createDocumentFragment(),
-        grid = [30, 10],
+        grid = [15, 10],
         numberOfItems = grid[0] * grid[1];
 
       var animation;
@@ -68,12 +68,12 @@
           targets: '.wave .item',
           keyframes: [
             {
-              translateX: anime.stagger('-5px', {grid: grid, from: 'center', axis: 'x'}),
-              translateY: anime.stagger('-5px', {grid: grid, from: 'center', axis: 'y'}),
-              scale: anime.stagger([2, 1], {grid: grid, from: 'center'}),
+              translateX: anime.stagger('-5px', {grid: grid, from: 10, axis: 'x'}),
+              translateY: anime.stagger('-5px', {grid: grid, from: 10, axis: 'y'}),
+              scale: anime.stagger([2, 1], {grid: grid, from: 10}),
               duration: 500,
             }, 
-              {opacity: anime.stagger([.5, .7, 1], {grid: grid, from: 'center', axis: 'x'})
+              {opacity: anime.stagger([.5, .7, 1], {grid: grid, from: 'first', axis: 'x'})
             },
             {
               translateX: 0,
