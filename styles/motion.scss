@@ -1,0 +1,189 @@
+$body-font: 'Roboto', sans-serif;
+$headings-font: 'Playfair Display', serif;
+
+.wrapper {
+  max-width: 1000px;
+  width: 100%;
+  padding: 2em;
+  margin: 0 auto;
+}
+.woman-at-desk {
+  .sky {
+    fill: #2c3e50
+  }
+
+  .st1 {
+    fill: #EEF2F4;
+  }
+
+  .st2 {
+    opacity: 0.34;
+  }
+
+  .st3 {
+    fill: #65706C;
+  }
+
+  .st4 {
+    fill: #2F262D;
+  }
+
+  .st5 {
+    fill: #FC9F6F;
+  }
+
+  .st6 {
+    fill: #F2F2F2;
+  }
+
+  .st7 {
+    fill: #02a8a8;
+  }
+
+  .st8 {
+    fill: #AFAFAF;
+  }
+
+  .st9 {
+    fill: #EF9067;
+  }
+
+  .st10 {
+    fill: #603936;
+  }
+
+  .st11 {
+    fill: #f0cf85;
+  }
+
+  .st12 {
+    fill: #494149;
+  }
+
+  .st13 {
+    opacity: 0.71;
+    fill: #D36B46;
+  }
+
+  .st14 {
+    fill: #DD9883;
+  }
+
+  .st15 {
+    fill: none;
+    stroke: #DD9883;
+    stroke-width: 3;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10;
+  }
+
+  .st16 {
+    opacity: 0.6;
+    fill: #EF9067;
+  }
+
+  .st17 {
+    fill: none;
+    stroke: #F6CDF7;
+    stroke-width: 3;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10;
+  }
+
+  .st18 {
+    fill: #FCFAFA;
+  }
+
+  .st19 {
+    fill: none;
+    stroke: #161515;
+    stroke-width: 3;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10;
+  }
+
+  .st20 {
+    fill: #754743;
+  }
+
+  .st21 {
+    fill: #F4EFF0;
+  }
+
+  .st22 {
+    fill: #FFFFFF;
+  }
+
+  .st23 {
+    fill: #E2E2E2;
+  }
+
+  .st24 {
+    fill: #018383;
+  }
+
+  .st25 {
+    fill: #CECECE;
+  }
+
+  .st26 {
+    fill: #535452;
+  }
+
+  .st27 {
+    fill: #FFFDFD;
+  }
+  
+  .st26,
+  .st27,
+  #XMLID_85_,
+  #XMLID_68_ {
+    transform-origin: 50% 50%;
+    transform: translateY(-5px);
+    animation: 2s rotate ease-in-out infinite;
+  }
+
+  .st28 {
+    fill: #424441;
+  }
+
+  .st29 {
+    fill: #FF6161;
+  }
+
+  .st30 {
+    fill: #F4A36C;
+  }
+
+  .st31 {
+    fill: #F7BC8B;
+  }
+
+  .st32 {
+    fill: #EFA573;
+  }
+
+  .st33 {
+    fill: #F2F2F2;
+    opacity: 0;
+    animation: 2s ease-in grow infinite 1.3s;
+
+    &:first-of-type {
+      animation-delay: 0.9s;
+    }
+  }
+}
+
+@keyframes grow {
+  from{ opacity: 0}
+  to{ opacity: 1}
+}
+
+@keyframes rotate {
+  50% {
+    transform: rotate(-2deg);
+  }
+}
