@@ -1,7 +1,6 @@
 .wrapper {
-  max-width: 1000px;
+  max-width: 800px;
   width: 100%;
-  padding: 2em;
   margin: 0 auto;
 }
 
@@ -209,4 +208,4 @@
             transform: rotate(-2deg);
   }
 }
-/*# sourceMappingURL=motion.css.map */
+/*# sourceMappingURL=one.css.map */

@@ -1,12 +1,12 @@
 $body-font: 'Roboto', sans-serif;
-$headings-font: 'Playfair Display', serif;
 
+// day 1
 .wrapper {
-  max-width: 1000px;
+  max-width: 800px;
   width: 100%;
-  padding: 2em;
   margin: 0 auto;
 }
+
 .woman-at-desk {
   .sky {
     fill: #2c3e50
@@ -136,7 +136,7 @@ $headings-font: 'Playfair Display', serif;
   .st27 {
     fill: #FFFDFD;
   }
-  
+
   .st26,
   .st27,
   #XMLID_85_,
@@ -175,15 +175,20 @@ $headings-font: 'Playfair Display', serif;
       animation-delay: 0.9s;
     }
   }
-}
 
-@keyframes grow {
-  from{ opacity: 0}
-  to{ opacity: 1}
-}
+  @keyframes grow {
+    from {
+      opacity: 0
+    }
 
-@keyframes rotate {
-  50% {
-    transform: rotate(-2deg);
+    to {
+      opacity: 1
+    }
+  }
+
+  @keyframes rotate {
+    50% {
+      transform: rotate(-2deg);
+    }
   }
 }
