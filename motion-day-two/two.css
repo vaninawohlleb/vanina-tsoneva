@@ -87,8 +87,8 @@
             transform: translateY(0);
   }
   100% {
-    -webkit-transform: translateY(-1000%);
-            transform: translateY(-1000%);
+    -webkit-transform: translateY(1000%);
+            transform: translateY(1000%);
   }
 }
 
@@ -98,8 +98,8 @@
             transform: translateY(0);
   }
   100% {
-    -webkit-transform: translateY(-1000%);
-            transform: translateY(-1000%);
+    -webkit-transform: translateY(1000%);
+            transform: translateY(1000%);
   }
 }
 
