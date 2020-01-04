@@ -10,8 +10,8 @@ const m = {
 }
 
 window.onmousemove = function(e) {
-  m.x = e.clientX; // the x coordinate within the client app not the screen
-  m.y = e.clientY; // the y coordinate withing the client app
+  m.x = e.clientX; 
+  m.y = e.clientY; 
 }
 
 var a = [];
@@ -20,7 +20,7 @@ window.onload = function particles() {
   c = cn.getContext("2d");
 
   for(var i = 0; i < 6; i++) {
-    var t = new ob(this.innerWidth / 2, this.innerHeight / 2, 2, "white", Math.random() * 200 + 20, 2);
+    var t = new obj(this.innerWidth / 2, this.innerHeight / 2, 2, "white", Math.random() * 200 + 20, 2);
     a.push(t)
   }
 
@@ -37,11 +37,11 @@ function resize() {
   cn.width = innerWidth;
 
   for (var i = 0; i < 101; i++) {
-    a[i] = new ob(innerWidth / 2, innerHeight / 2, 1.5, "white", Math.random() * 200 + 20, 2);
+    a[i] = new obj(innerWidth / 2, innerHeight / 2, 1.5, "white", Math.random() * 200 + 20, 2);
   }
 }
 
-function ob(x, y, r, cc, o, s) {
+function obj(x, y, r, cc, o, s) {
   this.x = x;
   this.y = y;
   this.r = r;

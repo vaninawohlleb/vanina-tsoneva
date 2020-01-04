@@ -39,13 +39,12 @@
 }
 
 .three .text:hover {
-  color: #FF6161;
   -webkit-transition: color .3s ease-in-out;
   transition: color .3s ease-in-out;
 }
 
 .three .text:hover a {
-  color: #ffb061;
+  color: red;
   -webkit-transition: color .3s ease-in-out;
   transition: color .3s ease-in-out;
 }
