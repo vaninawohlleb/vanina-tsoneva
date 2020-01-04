@@ -1,0 +1,46 @@
+$body-font: 'Roboto', sans-serif;
+
+// day 3
+.three {
+  margin: 0;
+  padding: 0;
+  background-color: rgba(0, 0, 0, 0.05);
+  cursor: crosshair;
+
+  #cw {
+    position: fixed;
+    z-index: -1;
+  }
+
+  .text {
+    color: rgba(0, 0, 0, .5);
+    font-weight: 700;
+    font-family: $body-font;
+    text-transform: uppercase;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    vertical-align: center;
+    margin: 0 auto;
+    text-align: center;
+    padding: 3em;
+    transition: color 1s ease-in-out;
+
+    a {
+      text-decoration: none;
+      color: rgba(0, 0, 0, .5);
+      transition: color 1s ease-in-out;
+    }
+
+    &:hover {
+      color: white;
+      transition: color 1s ease-in-out;
+
+      a {
+        color: #FF6161;
+        transition: color 1s ease-in-out;
+      }
+    }
+  }
+}
+
