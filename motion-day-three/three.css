@@ -11,7 +11,7 @@
 }
 
 .three .text {
-  color: rgba(0, 0, 0, 0.5);
+  color: white;
   font-weight: 700;
   font-family: "Roboto", sans-serif;
   text-transform: uppercase;
@@ -27,26 +27,26 @@
   margin: 0 auto;
   text-align: center;
   padding: 3em;
-  -webkit-transition: color 1s ease-in-out;
-  transition: color 1s ease-in-out;
+  -webkit-transition: color .3s ease-in-out;
+  transition: color .3s ease-in-out;
 }
 
 .three .text a {
   text-decoration: none;
-  color: rgba(0, 0, 0, 0.5);
-  -webkit-transition: color 1s ease-in-out;
-  transition: color 1s ease-in-out;
+  color: white;
+  -webkit-transition: color .3s ease-in-out;
+  transition: color .3s ease-in-out;
 }
 
 .three .text:hover {
-  color: white;
-  -webkit-transition: color 1s ease-in-out;
-  transition: color 1s ease-in-out;
+  color: #FF6161;
+  -webkit-transition: color .3s ease-in-out;
+  transition: color .3s ease-in-out;
 }
 
 .three .text:hover a {
-  color: #FF6161;
-  -webkit-transition: color 1s ease-in-out;
-  transition: color 1s ease-in-out;
+  color: #ffb061;
+  -webkit-transition: color .3s ease-in-out;
+  transition: color .3s ease-in-out;
 }
 /*# sourceMappingURL=three.css.map */

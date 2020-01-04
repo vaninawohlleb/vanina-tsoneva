@@ -13,7 +13,7 @@ $body-font: 'Roboto', sans-serif;
   }
 
   .text {
-    color: rgba(0, 0, 0, .5);
+    color: white;
     font-weight: 700;
     font-family: $body-font;
     text-transform: uppercase;
@@ -24,21 +24,21 @@ $body-font: 'Roboto', sans-serif;
     margin: 0 auto;
     text-align: center;
     padding: 3em;
-    transition: color 1s ease-in-out;
+    transition: color .3s ease-in-out;
 
     a {
       text-decoration: none;
-      color: rgba(0, 0, 0, .5);
-      transition: color 1s ease-in-out;
+      color: white;
+      transition: color .3s ease-in-out;
     }
 
     &:hover {
-      color: white;
-      transition: color 1s ease-in-out;
+      color: #FF6161;
+      transition: color .3s ease-in-out;
 
       a {
-        color: #FF6161;
-        transition: color 1s ease-in-out;
+        color: #ffb061;
+        transition: color .3s ease-in-out;
       }
     }
   }
