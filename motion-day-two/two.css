@@ -8,27 +8,6 @@
   margin: 0 auto;
 }
 
-.two .rocket .st0 {
-  opacity: 0;
-  stroke: #fff;
-  stroke-width: 3;
-  stroke-dasharray: 1000 1000;
-  stroke-dashoffset: 0;
-}
-
-.two .rocket .st0.loaded {
-  -webkit-animation: 1s opacity .5s linear forwards, 2s stroke .5s linear, 1s bounce 2s ease-in-out infinite;
-          animation: 1s opacity .5s linear forwards, 2s stroke .5s linear, 1s bounce 2s ease-in-out infinite;
-}
-
-.two .rocket .st3 {
-  fill: #111d5e;
-}
-
-.two .rocket:not(.st3) {
-  fill: none;
-}
-
 .two .star {
   opacity: 0;
   max-width: 70px;

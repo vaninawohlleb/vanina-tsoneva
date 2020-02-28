@@ -10,29 +10,31 @@ $body-font: 'Roboto', sans-serif;
     margin: 0 auto;
   }
 
-  .rocket {
-    .st0 {
-      opacity: 0;
-      stroke: #fff;
-      stroke-width: 3;
-      stroke-dasharray: 1000 1000;
-      stroke-dashoffset: 0;
+  // .rocket {
+  //   .st0 {
+  //     opacity: 0;
+  //     stroke: #fff;
+  //     stroke-width: 3;
+  //     stroke-dasharray: 1000 1000;
+  //     stroke-dashoffset: 0;
 
-      &.loaded {
-        animation: 1s opacity .5s linear forwards,
-        2s stroke .5s linear,
-        1s bounce 2s ease-in-out infinite;
-      }
-    }
+  //     &.loaded {
+  //       opacity: 1;
+  //       background: red;
+  //       animation: 1s opacity .5s linear forwards,
+  //       2s stroke .5s linear,
+  //       1s bounce 2s ease-in-out infinite;
+  //     }
+  //   }
 
-    .st3 {
-      fill: #111d5e;
-    }
+  //   .st3 {
+  //     fill: #111d5e;
+  //   }
 
-    &:not(.st3) {
-      fill: none
-    }
-  }
+  //   &:not(.st3) {
+  //     fill: none
+  //   }
+  // }
 
   .star {
     opacity: 0;

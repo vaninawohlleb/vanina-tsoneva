@@ -1,7 +1,13 @@
-$body-font: 'Roboto',
-sans-serif;
-$headings-font: 'Playfair Display',
-serif;
+/* NORMALIZE */
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+$body-font: 'Roboto', sans-serif;
+$headings-font: 'Playfair Display', serif;
+
 
 $small-gap: 1.25em;
 $big-gap: 3em;
