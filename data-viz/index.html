@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>BrightAct</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700=swap" rel="stylesheet">
+    <link href="data-viz.css" rel="stylesheet" type="text/css">
+  </head>
+
+  <body class="data-viz">
+    <div class="text">
+      <h1>Data visualization for Domestic Violence cases</h1>
+      <div id="map-chart" class="map-chart" style="height: 500px"></div>
+    </div>
+  </body>
+
+  <!-- Amcharts  -->
+  <script src="https://www.amcharts.com/lib/4/core.js"></script>
+  <script src="https://www.amcharts.com/lib/4/maps.js"></script>
+  <script src="https://www.amcharts.com/lib/4/geodata/worldLow.js"></script>
+  <script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
+
+  <script type="text/javascript">
+    am4core.ready(function() {
+      am4core.useTheme(am4themes_animated);
+      
+      var map = am4core.create('map-chart', am4maps.MapChart);
+
+      map.geodata = am4geodata_worldLow;
+      map.projection = new am4maps.projections.Miller();
+
+      // Polygon Series
+      var polygonSeries = new am4maps.MapPolygonSeries();
+
+      // Data
+      polygonSeries.useGeodata = true;
+      map.series.push(polygonSeries);
+
+      // Configure series visual
+      var polygonTemplate = polygonSeries.mapPolygons.template;
+      polygonTemplate.tooltipText = "{name}: {value}";
+      polygonTemplate.fill = am4core.color('#3b3b3b');
+      polygonSeries.exclude = ['AQ'];
+
+      var hoverState = polygonTemplate.states.create('hover');
+      hoverState.properties.fill = am4core.color('#1b1b1b');
+
+      polygonSeries.data = [
+        { "name": "Austria", "value": "23" },
+        { "name": "Belgium", "value": "24" },
+        { "id": "BG", "name": "Bulgaria", "value": "23" },
+        { "name": "Cyprus", "value": "15" },
+        { "name": "Czech Republic", "value": "21" },
+        { "name": "Germany", "value": "22" },
+        { "name": "Denmark", "value": "32" },
+        { "name": "Estonia", "value": "20" },
+        { "name": "Greece", "value": "19" },
+        { "name": "Spain", "value": "13" },
+        { "name": "Finland", "value": "20" },
+        { "name": "France", "value": "26" },
+        { "name": "Croatia", "value": "13" },
+        { "name": "Hungary", "value": "21" },
+        { "name": "Ireland", "value": "15" },
+        { "name": "Italy", "value": "19" },
+        { "name": "Lithuania", "value": "24" },
+        { "name": "Luxemburg", "value": "22" },
+        { "name": "Latvia", "value": "32" },
+        { "name": "Malta", "value": "15" },
+        { "name": "Netherlands", "value": "25" },
+        { "name": "Poland", "value": "13" },
+        { "name": "Portugal", "value": "19" },
+        { "name": "Romania", "value": "24" },
+        { "name": "Sweden", "value": "28" },
+        { "name": "Slovenia", "value": "13" },
+        { "name": "Slovakia", "value": "23" },
+        { "name": "UK", "value": "29" }
+      ]
+    })
+  </script>
+</html>
