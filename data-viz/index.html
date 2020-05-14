@@ -10,9 +10,11 @@
   </head>
 
   <body class="data-viz">
-    <div class="text">
-      <h1>Data visualization for Domestic Violence cases</h1>
-      <div id="map-chart" class="map-chart" style="height: 500px"></div>
+    <h1>Women who have experienced physical and/or sexual violence by current and/or previous partner, since the age of
+      15</h1>
+    <div class="map">
+      <div id="map-legend" class="map__legend"></div>
+      <div id="map-chart" class="map__chart"></div>  
     </div>
   </body>
 
@@ -25,58 +27,96 @@
   <script type="text/javascript">
     am4core.ready(function() {
       am4core.useTheme(am4themes_animated);
-      
       var map = am4core.create('map-chart', am4maps.MapChart);
-
       map.geodata = am4geodata_worldLow;
       map.projection = new am4maps.projections.Miller();
 
+      map.homeZoomLevel = 3;
+      map.homeGeoPoint = {
+        latitude: 52,
+        longitude: 10
+      };
+
       // Polygon Series
-      var polygonSeries = new am4maps.MapPolygonSeries();
-
-      // Data
+      var polygonSeries = map.series.push(new am4maps.MapPolygonSeries());;
       polygonSeries.useGeodata = true;
-      map.series.push(polygonSeries);
-
-      // Configure series visual
-      var polygonTemplate = polygonSeries.mapPolygons.template;
-      polygonTemplate.tooltipText = "{name}: {value}";
-      polygonTemplate.fill = am4core.color('#3b3b3b');
       polygonSeries.exclude = ['AQ'];
+      polygonSeries.nonScalingStroke = true;
+      polygonSeries.strokeWidth = 0.1;
+      polygonSeries.calculateVisualCenter = true;
 
+      // Configure map visual
+      var polygonTemplate = polygonSeries.mapPolygons.template;
+      // polygonTemplate.tooltipText = "{name}";
+      polygonTemplate.fill = am4core.color('#51515E');
+      polygonTemplate.stroke = am4core.color('#A4A4A9');
+      map.backgroundSeries.mapPolygons.template.polygon.fill = am4core.color("#454553")
+      map.backgroundSeries.mapPolygons.template.polygon.fillOpacity = 1;
+
+      // bubbles and external data
+      var imageSeries = map.series.push(new am4maps.MapImageSeries());
+      imageSeries.dataSource.url = '/data-viz/violence_by_country.json'; 
+      imageSeries.dataFields.value = "value";
+
+      // Configure bubble visual
+      var imageTemplate = imageSeries.mapImages.template;
+      imageTemplate.nonScaling = true;
+
+      var circle = imageTemplate.createChild(am4core.Circle);
+      circle.fillOpacity = 0.7;
+      circle.fill = am4core.color("#FC5E2F");
+      circle.tooltipText = "{country}: [bold]{value}%[/]";
+
+      imageSeries.heatRules.push({
+        "target": circle,
+        "property": "radius",
+        "min": 8,
+        "max": 35,
+        "dataField": "value"
+      })
+      
+      // Add latitude and longitude
+      imageTemplate.adapter.add("latitude", function (latitude, target) {
+        var polygon = polygonSeries.getPolygonById(target.dataItem.dataContext.id);
+        if (polygon) {
+          return polygon.visualLatitude;
+        }
+        return latitude;
+      })
+
+      imageTemplate.adapter.add("longitude", function (longitude, target) {
+        var polygon = polygonSeries.getPolygonById(target.dataItem.dataContext.id);
+        if (polygon) {
+          return polygon.visualLongitude;
+        }
+        return longitude;
+      })
+      
+      // Zoom
+      map.zoomControl = new am4maps.ZoomControl();
+      
+      // Hover on country
       var hoverState = polygonTemplate.states.create('hover');
-      hoverState.properties.fill = am4core.color('#1b1b1b');
+      hoverState.properties.fill = am4core.color('#454553');
 
-      polygonSeries.data = [
-        { "name": "Austria", "value": "23" },
-        { "name": "Belgium", "value": "24" },
-        { "id": "BG", "name": "Bulgaria", "value": "23" },
-        { "name": "Cyprus", "value": "15" },
-        { "name": "Czech Republic", "value": "21" },
-        { "name": "Germany", "value": "22" },
-        { "name": "Denmark", "value": "32" },
-        { "name": "Estonia", "value": "20" },
-        { "name": "Greece", "value": "19" },
-        { "name": "Spain", "value": "13" },
-        { "name": "Finland", "value": "20" },
-        { "name": "France", "value": "26" },
-        { "name": "Croatia", "value": "13" },
-        { "name": "Hungary", "value": "21" },
-        { "name": "Ireland", "value": "15" },
-        { "name": "Italy", "value": "19" },
-        { "name": "Lithuania", "value": "24" },
-        { "name": "Luxemburg", "value": "22" },
-        { "name": "Latvia", "value": "32" },
-        { "name": "Malta", "value": "15" },
-        { "name": "Netherlands", "value": "25" },
-        { "name": "Poland", "value": "13" },
-        { "name": "Portugal", "value": "19" },
-        { "name": "Romania", "value": "24" },
-        { "name": "Sweden", "value": "28" },
-        { "name": "Slovenia", "value": "13" },
-        { "name": "Slovakia", "value": "23" },
-        { "name": "UK", "value": "29" }
-      ]
+      // Legend
+      var legendContainer = am4core.create("map-legend", am4core.Container);
+      legendContainer.width = am4core.percent(100);
+      legendContainer.height = am4core.percent(100);
+
+      map.legend = new am4maps.Legend();
+      map.legend.position = "absolute";
+      map.legend.parent = legendContainer;
+      map.legend.scrollable = true;
+      map.legend.maxWidth = "100";
+      map.legend.markers.template.disabled = true;
+
+
+      map.legend.dataSource.url = '/data-viz/violence_by_country.json';
+      map.legend.labels.template.text = "{country}:";
+      map.legend.labels.template.fill = am4core.color('#fff');
+      map.legend.valueLabels.template.text = "{value}%";
+      map.legend.valueLabels.template.fill = am4core.color('#FC5E2F');
     })
   </script>
 </html>

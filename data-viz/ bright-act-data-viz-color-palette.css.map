@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,sFAAsF;AAEtF,SAAS;AAOT,SAAS;AAOT,SAAS;AAOT,cAAc",
+    "sources": [
+        " bright-act-data-viz-color-palette.scss"
+    ],
+    "names": [],
+    "file": " bright-act-data-viz-color-palette.css"
+}

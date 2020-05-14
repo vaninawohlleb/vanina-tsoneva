@@ -1,1 +1,34 @@
-/* No CSS *//*# sourceMappingURL=data-viz.css.map */
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background: #454553;
+  font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+  color: #fff;
+  padding: 1rem 2rem;
+}
+
+.data-viz .map {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 20% 80%;
+      grid-template-columns: 20% 80%;
+}
+
+.data-viz .map__chart {
+  height: 75vh;
+  width: 100%;
+}
+
+.data-viz .map__legend {
+  width: 100%;
+  color: #fff;
+}
+/*# sourceMappingURL=data-viz.css.map */
