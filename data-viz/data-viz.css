@@ -20,6 +20,10 @@ p {
   margin: 5px;
 }
 
+a {
+  color: #FC5E2F;
+}
+
 .data-viz hgroup {
   color: #fff;
   padding: 2rem;
