@@ -5,19 +5,33 @@
 }
 
 body {
-  background: #454553;
+  background: #35353F;
   font-family: 'Roboto', sans-serif;
 }
 
 h1 {
-  color: #fff;
-  padding: 1rem 2rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin: 0;
+}
+
+p {
+  margin: 5px;
 }
 
 .data-viz {
+  hgroup {
+    color: #fff;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: 55% 40%;
+    grid-column-gap: 5vw;
+    align-items: start;
+  }
+
   .map {
     display: grid;
-    grid-template-columns: 20% 80%;
+    grid-template-columns: 15% 85%;
     
     &__chart {
       height: 75vh;
@@ -27,6 +41,7 @@ h1 {
     &__legend {
       width: 100%;
       color: #fff;
+      padding-left: 1rem;
     }
   }
   
