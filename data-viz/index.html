@@ -130,19 +130,18 @@
       map.legend.valueLabels.template.textAlign = "start";
       map.legend.itemContainers.template.paddingTop = 5;
       map.legend.itemContainers.template.paddingBottom = 5;
-
+      map.legend.itemContainers.template.togglable = false;
+      
       map.legend.itemContainers.template.events.on("toggled", function(event) {
         var item = event.target;
+        var polygonItem = polygonSeries.getPolygonById(item.dataItem.dataContext.id);
+        polygonItem.dataItem.mapObject.isHover = true;
 
-        imageSeries.dataItems.each(function (row, i) {
-          if (item.isActive && item.dataItem.dataContext.country === row.dataContext.country) { 
-            map.zoomToGeoPoint(row.geoPoint, 20, true);
-            circle.fill = am4core.color("#fff");
-          } else if (!item.isActive) {
-          //  map.zoomToGeoPoint(map.homeGeoPoint, 3);
-
-          }
-        })
+        if (item.isActive) {
+          map.zoomToRectangle(polygonItem.dataItem.north, polygonItem.dataItem.east, polygonItem.dataItem.south, polygonItem.dataItem.west, true, 1)
+        } else if (!item.isActive) {
+          map.zoomToRectangle(map.north, map.east, map.south, map.west, true, 1)
+        }
       })
     })
   </script>
