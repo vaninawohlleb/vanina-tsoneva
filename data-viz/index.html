@@ -54,9 +54,9 @@
 
       // Configure map visual
       var polygonTemplate = polygonSeries.mapPolygons.template;
-      // polygonTemplate.tooltipText = "{name}";
       polygonTemplate.fill = am4core.color('#454553');
       polygonTemplate.stroke = am4core.color('#A4A4A9');
+
       map.backgroundSeries.mapPolygons.template.polygon.fill = am4core.color("#35353F");
       map.backgroundSeries.mapPolygons.template.polygon.fillOpacity = 1;
 
@@ -68,15 +68,17 @@
       // Configure bubble visual
       var imageTemplate = imageSeries.mapImages.template;
       imageTemplate.nonScaling = true;
-
-      var circle = imageTemplate.createChild(am4core.Circle);
-      circle.fillOpacity = 0.7;
-      circle.fill = am4core.color("#FC5E2F");
-      circle.tooltipText = "{country}: [bold]{value}%[/]";
+      imageTemplate.tooltipHTML = "{country}: <strong>{value}%</strong>";
+      
+      // "<br />For contact organization, got to www.example.com or call + 359 876 257 515";
       imageSeries.tooltip.getFillFromObject = false;
       imageSeries.tooltip.background.fill = am4core.color("#35353F");
       imageSeries.tooltip.label.fill = am4core.color("#fff");
 
+      var circle = imageTemplate.createChild(am4core.Circle);
+      circle.fillOpacity = 0.7;
+      circle.fill = am4core.color("#FC5E2F");
+      
       imageSeries.heatRules.push({
         "target": circle,
         "property": "radius",
@@ -135,13 +137,13 @@
       map.legend.itemContainers.template.events.on("toggled", function(event) {
         var item = event.target;
         var polygonItem = polygonSeries.getPolygonById(item.dataItem.dataContext.id);
-        polygonItem.dataItem.mapObject.isHover = true;
-
+        
         if (item.isActive) {
-          map.zoomToRectangle(polygonItem.dataItem.north, polygonItem.dataItem.east, polygonItem.dataItem.south, polygonItem.dataItem.west, true, 1)
+          map.zoomToRectangle(polygonItem.dataItem.north, polygonItem.dataItem.east, polygonItem.dataItem.south, polygonItem.dataItem.west, true, 1);
+          polygonItem.isHover = true;
+        
         } else if (!item.isActive) {
           map.goHome(500); // srsly haha
-          // map.zoomToRectangle(map.north, map.east, map.south, map.west, true, 1)
         }
       })
     })
